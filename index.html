@@ -37,14 +37,16 @@
         options.scope_data = {
             'profile' : {'essential': false} 
         };
-        amazon.Login.authorize(options, function(response) {
-        	console.log("trying to authorize");
-		  	if ( response.error ) {
-		      alert('oauth error ' + response.error);
-		      return;
-		  	}
-			alert('success: ' + response.access_token);
-		});
+        amazon.Login.authorize(options, 
+        	'https://pushekmadaan.github.io/index.html')
+        //function(response) {
+        //	console.log("trying to authorize");
+		//  	if ( response.error ) {
+		//      alert('oauth error ' + response.error);
+		//      return;
+		//  	}
+		//	alert('success: ' + response.access_token);
+		//});
         return false;
     };
 </script>
