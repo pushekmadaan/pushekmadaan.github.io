@@ -18,8 +18,10 @@
             console.log("Form loaded, client ID set");
     };
     (function(d) {
-      var a = d.createElement('script'); a.type = 'text/javascript';
-      a.async = true; a.id = 'amazon-login-sdk';
+      var a = d.createElement('script'); 
+      a.type = 'text/javascript';
+      a.async = true; 
+      a.id = 'amazon-login-sdk';
       a.src = 'https://assets.loginwithamazon.com/sdk/na/login1.js';
       d.getElementById('amazon-root').appendChild(a);
     })(document);
@@ -39,6 +41,9 @@
         };
         amazon.Login.authorize(options, 
         	'https://pushekmadaan.github.io/index.html')
+        let url = window.location.href;
+        let access_token = url.match(/\#(?:access_token)\=([\S\s]*?)\&/)[1];
+        alert (access_token);
         //function(response) {
         //	console.log("trying to authorize");
 		//  	if ( response.error ) {
