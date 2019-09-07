@@ -45,16 +45,16 @@
         var scopeData = new Object();
 
         scopeData[drsScope] = {
-        	device_model: deviceModel;
-        	serial: serialNo;
+        	device_model: deviceModel,
+        	serial: serialNo,
         	should_include_non_live: true,
         	is_test_device: true
         };
 
         var options = {
-        options.interactive: 'always';
-        options.scope: 'dash:replenish';
-        options.scope_data: scopeData;
+        options.interactive: 'always',
+        options.scope: 'dash:replenish',
+        options.scope_data: scopeData,
         response_type: 'code'
     	   };
 
