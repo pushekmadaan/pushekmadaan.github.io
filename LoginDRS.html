@@ -38,10 +38,10 @@
 
 <script type="text/javascript">
     document.getElementById('LoginWithAmazon').onclick = function() {
-        console.log("Button clicked");
+        console.log("Button clicked, creating packet");
         var deviceModel = 'MyTempSensor001';
         var serialNo = 'MyTempSensor001_12345';
-        var drsScope = 'dash:replenish'
+        var drsScope = 'dash:replenish';
         var scopeData = new Object();
 
         scopeData[drsScope] = {
@@ -49,21 +49,21 @@
         	serial: serialNo;
         	should_include_non_live: true,
         	is_test_device: true
-        }
+        };
 
         var options = {
         options.interactive: 'always';
         options.scope: 'dash:replenish';
         options.scope_data: scopeData;
         response_type: 'code'
-    	}
+    	   };
 
         amazon.Login.authorize(options, function(response) {
         	console.log("trying to authorize");
 		  	if ( response.error ) {
 		      alert('oauth error ' + response.error);
 		      return;
-		  	}
+		  	};
 			alert('success: ' + response.code);
 		});
         return false;
