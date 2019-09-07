@@ -42,23 +42,18 @@
         options = {}
         options.interactive = 'always';
         options.scope = 'profile';
-        options.popup = false;
+        //options.popup = false;
         options.scope_data = {
             'profile' : {'essential': false} 
         };
-        amazon.Login.authorize(options, 
-        	'https://pushekmadaan.github.io/index.html');
-        let url = window.location.href;
-        let access_token = url.match(/\#(?:access_token)\=([\S\s]*?)\&/)[1];
-        alert (access_token);
-        //function(response) {
-        //	console.log("trying to authorize");
-		//  	if ( response.error ) {
-		//      alert('oauth error ' + response.error);
-		//      return;
-		//  	}
-		//	alert('success: ' + response.access_token);
-		//});
+        amazon.Login.authorize(options, function(response) {
+        	console.log("trying to authorize");
+		  	if ( response.error ) {
+		      alert('oauth error ' + response.error);
+		      return;
+		  	}
+			alert('success: ' + response.access_token);
+		});
         return false;
     };
 </script>
