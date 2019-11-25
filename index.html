@@ -14,7 +14,7 @@
  	<script type="text/javascript">
     window.onAmazonLoginReady = function() {
    	console.log("Form loaded, trying top set the client ID");
-      amazon.Login.setClientId('amzn1.application-oa2-client.5a4055f45a714b6886366f154ec284fc');
+      amazon.Login.setClientId('amzn1.application-oa2-client.289145aaed6a4a908547bdde7f63cf16');
             console.log("Form loaded, client ID set");
     };
     (function(d) {
@@ -39,8 +39,8 @@
 <script type="text/javascript">
     document.getElementById('LoginWithAmazon').onclick = function() {
         console.log("Button clicked, creating packet");
-        var deviceModel = '3775C002AA';
-        var serialNo = 'AFNX06642';
+        var deviceModel = 'MyTempSensor001';
+        var serialNo = 'MyTempSensor001_12345';
         var drsScope = 'dash:replenish';
         var scopeData = new Object();
 
