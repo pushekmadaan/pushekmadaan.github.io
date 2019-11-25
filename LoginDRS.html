@@ -58,15 +58,18 @@
         response_type: 'code'
     	   };
 
-        amazon.Login.authorize(options, function(response) {
-        	console.log("trying to authorize");
-		  	if ( response.error ) {
-		      alert('oauth error ' + response.error);
-		      return;
-		  	};
-			alert('success: ' + response.code);
-		});
-        return false;
+	amazon.Login.authorize(options, 'https://pushekmadaan.github.io');
+    	return false;
+	    
+//        amazon.Login.authorize(options, function(response) {
+//        	console.log("trying to authorize");
+//		  	if ( response.error ) {
+//		      alert('oauth error ' + response.error);
+//		      return;
+//		  	};
+//			alert('success: ' + response.code);
+//		});
+//        return false;
     };
 </script>
 
