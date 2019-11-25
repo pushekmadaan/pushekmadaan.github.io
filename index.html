@@ -39,8 +39,8 @@
 <script type="text/javascript">
     document.getElementById('LoginWithAmazon').onclick = function() {
         console.log("Button clicked, creating packet");
-        var deviceModel = 'MyTempSensor001';
-        var serialNo = 'MyTempSensor001_12345';
+        var deviceModel = '3775C002AA';
+        var serialNo = 'AFNX06642';
         var drsScope = 'dash:replenish';
         var scopeData = new Object();
 
@@ -58,7 +58,7 @@
         response_type: 'code'
     	   };
 
-	amazon.Login.authorize(options, 'https://pushekmadaan.github.io');
+	amazon.Login.authorize(options, 'https://replenish.usa.canon.com/myaccount/amazonreturn');
     	return false;
 	    
 //        amazon.Login.authorize(options, function(response) {
