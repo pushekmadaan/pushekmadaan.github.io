@@ -40,7 +40,7 @@
     document.getElementById('LoginWithAmazon').onclick = function() {
         console.log("Button clicked, creating packet");
         var deviceModel = 'MyTempSensor001';
-        var serialNo = 'MyTempSensor001_123456';
+        var serialNo = 'MyTempSensor001_1234567';
         var drsScope = 'dash:replenish';
         var scopeData = new Object();
 
@@ -48,7 +48,7 @@
         	device_model: deviceModel,
         	serial: serialNo,
         	should_include_non_live: true,
-        	is_test_device: false
+        	is_test_device: true
         };
 
         var options = {
