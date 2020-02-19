@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>My Test Webpafe</title>
+	<title>My Test Webpage</title>
 
 <a href id="LoginWithAmazon">
     <img border="0" alt="Login with Amazon"
@@ -15,6 +15,7 @@
     window.onAmazonLoginReady = function() {
    	console.log("Form loaded, trying top set the client ID");
       amazon.Login.setClientId('amzn1.application-oa2-client.289145aaed6a4a908547bdde7f63cf16');
+	    document.getElementById('LoginWithAmazon').click();
             console.log("Form loaded, client ID set");
     };
     (function(d) {
@@ -40,14 +41,14 @@
     document.getElementById('LoginWithAmazon').onclick = function() {
         console.log("Button clicked, creating packet");
         var deviceModel = 'MyTempSensor001';
-        var serialNo = 'MyTempSensor001_123456789';
+        var serialNo = 'MyTempSensor001_1234567890';
         var drsScope = 'dash:replenish';
         var scopeData = new Object();
 
         scopeData[drsScope] = {
         	device_model: deviceModel,
         	serial: serialNo,
-        	should_include_non_live: true,
+        	//should_include_non_live: true,
         	is_test_device: false
         };
 
